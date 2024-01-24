@@ -1,0 +1,35 @@
+<resources>
+    <string name="app_name">GrootClub</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="sign_in">Sign in</string>
+    <string name="sign_up">Sign up</string>
+    <string name="remember_me">Remember Me</string>
+    <string name="full_name">Full name</string>
+    <string name="your_password">Your password</string>
+    <string name="hint_abc_email_com">abc@email.com</string>
+    <string name="confirm_password">Confirm password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="txt_about_me">About Me</string>
+    <string name="about_me">Enjoy your favorite dishe and a lovely your \n dgywhdkhwhdwdhuwdhwkdkwdkwkdekwkkww. \n dhwndmkwdjwdkwddkwdkdkkd \n iekekeeke.</string>
+    <string name="change">Change</string>
+    <string name="read_more">Read More</string>
+    <string name="test">test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test test</string>
+    <string name="open">open</string>
+    <string name="close">close</string>
+    <string name="menu_profile">Profile</string>
+    <string name="logout">Logout</string>
+    <string name="our_support">Our Support</string>
+    <string name="menu_about_us">About us</string>
+</resources>

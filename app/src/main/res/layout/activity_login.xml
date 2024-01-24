@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_another_color"
+    tools:context=".ui.signIn.SignInActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imvLogo"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:src="@drawable/logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/txtSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sign_in"
+            android:textColor="@color/text_slate_700"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imvLogo" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lyEmail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin50dp"
+            android:layout_marginTop="@dimen/margin20dp"
+            android:background="@drawable/bg_edittext_rounded"
+            android:paddingStart="@dimen/margin10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/txtSignIn"
+            tools:ignore="RtlSymmetry">
+
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imvEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin50dp"
+                android:src="@drawable/ic_mail_outline"
+                app:layout_constraintBottom_toBottomOf="@+id/lyEmail"
+                app:layout_constraintStart_toStartOf="@+id/lyEmail"
+                app:layout_constraintTop_toTopOf="@+id/lyEmail" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="@string/hint_abc_email_com"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:paddingStart="@dimen/margin10dp"
+                android:paddingEnd="@dimen/margin10dp"
+                android:textColor="@color/text_slate_700"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imvEmail"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlSymmetry" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/lyPass"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/margin50dp"
+            android:layout_marginTop="@dimen/margin20dp"
+            android:background="@drawable/bg_edittext_rounded"
+            android:paddingStart="@dimen/margin10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lyEmail"
+            tools:ignore="RtlSymmetry">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imvPass"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin50dp"
+                android:src="@drawable/ic_lock_outline"
+                app:layout_constraintBottom_toBottomOf="@+id/lyPass"
+                app:layout_constraintStart_toStartOf="@+id/lyPass"
+                app:layout_constraintTop_toTopOf="@+id/lyPass" />
+
+            <EditText
+                android:id="@+id/etPass"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:background="@null"
+                android:hint="@string/your_password"
+                android:imeOptions="actionDone"
+                android:inputType="textPassword"
+                android:textColor="@color/text_slate_700"
+                android:paddingStart="@dimen/margin10dp"
+                android:paddingEnd="@dimen/margin50dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/imvPass"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="RtlSymmetry" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imvEyePass"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/margin50dp"
+                android:paddingStart="@dimen/margin15dp"
+                android:paddingEnd="@dimen/margin15dp"
+                android:src="@drawable/ic_visibility_off"
+                app:layout_constraintBottom_toBottomOf="@+id/etPass"
+                app:layout_constraintEnd_toEndOf="@+id/etPass"
+                app:layout_constraintTop_toTopOf="@+id/etPass" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/lyPass">
+
+            <Switch
+                android:id="@+id/swRemember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:ignore="UseSwitchCompatOrMaterialXml" />
+
+            <TextView
+                android:id="@+id/tvRemember"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/remember_me"
+                android:textColor="@color/text_slate_700"
+                app:layout_constraintBottom_toBottomOf="@+id/swRemember"
+                app:layout_constraintTop_toTopOf="@+id/swRemember"
+                app:layout_constraintStart_toEndOf="@+id/swRemember" />
+
+            <TextView
+                android:id="@+id/tvForgotPass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/forgot_password"
+                android:textColor="@color/text_slate_700"
+                app:layout_constraintTop_toTopOf="@+id/tvRemember"
+                app:layout_constraintBottom_toBottomOf="@+id/tvRemember"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btnSignIn"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/bg_rounded_corner_button"
+            android:enabled="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout3">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtBtnSignIn"
+                android:text="@string/sign_in"
+                android:textColor="@color/text_white"
+                android:textStyle="normal"
+                android:textSize="24sp"
+                android:textAllCaps="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imvBtnSignIn"
+                android:src="@drawable/bg_circle"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginEnd="@dimen/margin30dp"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+            <androidx.appcompat.widget.AppCompatImageView
+                android:background="@drawable/ic_arrow_forward"
+                android:backgroundTint="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="@+id/imvBtnSignIn"
+                app:layout_constraintEnd_toEndOf="@+id/imvBtnSignIn"
+                app:layout_constraintTop_toTopOf="@+id/imvBtnSignIn"
+                app:layout_constraintBottom_toBottomOf="@+id/imvBtnSignIn"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btnSignUp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:background="@drawable/bg_button_rounded_corner"
+            android:enabled="true"
+            android:text="@string/sign_up"
+            android:textColor="@color/white"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSignIn" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
