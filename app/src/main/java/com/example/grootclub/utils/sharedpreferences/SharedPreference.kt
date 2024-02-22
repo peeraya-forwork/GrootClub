@@ -13,6 +13,8 @@ class SharedPreference(val context: Context) {
         const val IS_LOGIN: String = "isLogin"
         const val KEY_MAIL: String = "mail"
         const val KEY_PASS: String = "pass"
+        const val KEY_TOKEN: String = "token"
+        const val KEY_ID: String = "id"
         const val IS_REMEMBER: String = "isRemember"
     }
 

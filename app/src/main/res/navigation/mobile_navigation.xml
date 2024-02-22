@@ -23,4 +23,16 @@
         android:label="@string/menu_about_us"
         tools:layout="@layout/fragment_slideshow" />
 
+    <fragment
+        android:id="@+id/nav_privacy_policy"
+        android:name="com.example.grootclub.ui.PrivacyPolicy.PrivacyPolicyFragment"
+        android:label="@string/privacy_policy"
+        tools:layout="@layout/fragment_privacy_policy" />
+
+    <fragment
+        android:id="@+id/nav_terms_of_services"
+        android:name="com.example.grootclub.ui.TermsOfServices.TermsOfServicesFragment"
+        android:label="@string/terms_of_services"
+        tools:layout="@layout/fragment_terms_of_services" />
+
 </navigation>

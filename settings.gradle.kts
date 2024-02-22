@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Grootclub"
+rootProject.name = "GrootClub"
 include(":app")

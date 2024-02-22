@@ -4,20 +4,22 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/white"
     tools:context=".ui.detail.DetailActivity">
 
-    <androidx.appcompat.widget.AppCompatImageView
-        android:id="@+id/imvHead"
+    <include
+        android:id="@+id/itemCardView"
         android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:src="@drawable/logo"
+        android:layout_height="wrap_content"
+        layout="@layout/item_card_stadium"
+        android:layout_margin="@dimen/margin20dp"
+        android:layout_marginTop="@dimen/margin20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"/>
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txtOurSupport"
-        android:text="@string/our_support"
+        android:id="@+id/tvSection"
         android:textColor="@color/text_slate_700"
         android:textSize="@dimen/text_size_18sp"
         android:textStyle="bold"
@@ -27,17 +29,6 @@
         android:layout_marginTop="@dimen/margin20dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imvHead"/>
-
-    <include
-        android:id="@+id/itemCardView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        layout="@layout/item_card_stadium"
-        android:layout_margin="@dimen/margin50dp"
-        android:layout_marginTop="@dimen/margin20dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtOurSupport"/>
+        app:layout_constraintTop_toBottomOf="@+id/itemCardView"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

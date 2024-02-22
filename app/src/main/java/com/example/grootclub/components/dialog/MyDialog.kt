@@ -1,9 +1,10 @@
 package com.example.grootclub.components.dialog
 
+import android.app.Activity
 import android.content.Context
 import androidx.appcompat.app.AlertDialog
 
-class MyDialog {
+class MyDialog() {
     fun showDialog(context: Context, title: String, message: String) {
         AlertDialog.Builder(context)
             .setTitle(title)
@@ -26,4 +27,6 @@ class MyDialog {
             .show()
 
     }
+
+
 }

@@ -22,10 +22,11 @@ class DetailActivity : AppCompatActivity() {
                 // คุณสามารถใช้ข้อมูลในตัวแปร 'stadium' ใน activity ปลายทาง
                 val stadiumName = stadium.name
                 val stadiumSection = stadium.section
+                binding.itemCardView.tvNameStadium.text = stadiumName
+                binding.tvSection.text = stadiumSection
                 Log.e("DetailActivity", "stadium: ${stadium.name} ${stadium.section}")
             }
         }
-
 
 //        initView()
         setOnClicks()
@@ -47,19 +48,5 @@ class DetailActivity : AppCompatActivity() {
 
         }
 
-
-
-
     }
-
-
-//    inline fun <reified T : Parcelable> Bundle.parcelableArrayList(key: String): ArrayList<T>? = when {
-//        Build.VERSION.SDK_INT >= 33 -> getParcelableArrayList(key, T::class.java)
-//        else -> @Suppress("DEPRECATION") getParcelableArrayList(key)
-//    }
-//
-//    private inline fun <reified T : Parcelable> Intent.parcelableArrayList(key: String): ArrayList<T>? = when {
-//        Build.VERSION.SDK_INT >= 33 -> getParcelableArrayListExtra(key, T::class.java)
-//        else -> @Suppress("DEPRECATION") getParcelableArrayListExtra(key)
-//    }
 }

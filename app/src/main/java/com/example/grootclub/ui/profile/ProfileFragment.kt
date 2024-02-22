@@ -1,64 +1,83 @@
 package com.example.grootclub.ui.profile
 
+import android.content.Intent
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
+import com.example.appzaza.base.BaseFragment
+import com.example.grootclub.data.Remote.ApiService
+import com.example.grootclub.data.Remote.Repository.Profile.ProfileRepository
 import com.example.grootclub.databinding.FragmentProfileBinding
+import com.example.grootclub.ui.profile.editProfile.ProfileEdit
+import com.example.grootclub.ui.signIn.SignInViewModel
+import com.example.grootclub.utils.loadImage
 import com.example.grootclub.utils.sharedpreferences.SharedPreference
+import com.example.grootclub.utils.sharedpreferences.SharedPreference.Companion.KEY_TOKEN
 
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
+class ProfileFragment : BaseFragment<FragmentProfileBinding>() {
+    override val bindLayout: (LayoutInflater, ViewGroup?, Boolean) -> FragmentProfileBinding
+        get() = FragmentProfileBinding::inflate
 
-class ProfileFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
-
-    private var _binding: FragmentProfileBinding? = null
     private lateinit var sharedPref: SharedPreference
+    private lateinit var viewModel: ProfileVM
+    private lateinit var profileRepository: ProfileRepository
 
+    override fun prepareView(savedInstanceState: Bundle?) {
 
-    private val binding get() = _binding!!
+        sharedPref = SharedPreference(requireContext())
+        val token = sharedPref.getValueString(KEY_TOKEN)
+        val serviceInstance = ApiService().getService(token)
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        // Inflate the layout for this fragment
-        _binding = FragmentProfileBinding.inflate(inflater, container, false)
+        profileRepository = ProfileRepository(serviceInstance)
+        viewModel = ViewModelProvider(this,ProfileVMFactory(profileRepository))[ProfileVM::class.java]
 
         initView()
-        setDataUserSharedPreference()
+        showProgressDialog()
+        viewModel.postCurrentUser()
+//        setDataUserSharedPreference()
+        observeData()
         initToolBar()
         setOnClicks()
-        return binding.root
+    }
+
+    private fun observeData() {
+        viewModel.currentUserResponse.observe(this) { result ->
+            hideProgressDialog()
+            if (result != null) {
+                binding.imvProfile.loadImage(result.img)
+                binding.tvName.text = result.fname + " " + result.lname
+
+                binding.tvEmail.text = result.email
+                binding.tvGender.text = result.gender
+                binding.tvPhone.text = result.phone
+                binding.tvBirtDay.text = result.birthday
+                binding.tvAge.text = result.age
+            } else {
+                Toast.makeText(requireContext(), "Error", Toast.LENGTH_SHORT).show()
+            }
+        }
     }
 
     private fun initToolBar() {
         binding.toolbar.toolbarMain.visibility = View.GONE
     }
 
-    private fun setDataUserSharedPreference() {
-        sharedPref = SharedPreference(requireContext())
-        sharedPref.checkLogin()
-        val user: HashMap<String, String> = sharedPref.getUserDetails()
-
-        val name: String = user[SharedPreference.KEY_MAIL]!!
-
-        binding.tvName.text = name
-//        binding.password.text ="Pass: $pass"
-    }
+//    private fun setDataUserSharedPreference() {
+//        sharedPref = SharedPreference(requireContext())
+//        sharedPref.checkLogin()
+//        val user: HashMap<String, String> = sharedPref.getUserDetails()
+//
+//        val name: String = user[SharedPreference.KEY_MAIL]!!
+//
+//        val token = sharedPref.getValueString(KEY_TOKEN)
+//        Log.e("token", token.toString())
+//
+//        binding.tvName.text = name
+//    }
 
 
     private fun initView() {
@@ -67,40 +86,22 @@ class ProfileFragment : Fragment() {
 
     private fun setOnClicks() {
         binding.btnEditProfile.setOnClickListener {
-//            Toast.makeText(requireContext(), "Edit Profile", Toast.LENGTH_SHORT).show()
-            Toast.makeText(requireContext(), "ยังบ่ทันเฮ็ดจ้า พส.", Toast.LENGTH_SHORT).show()
+            showProgressDialog()
+            Intent(requireContext(), ProfileEdit::class.java).also {
+                startActivity(it)
+            }
         }
 
         binding.btnChangeInterest.setOnClickListener {
 //            Toast.makeText(requireContext(), "Change Interest", Toast.LENGTH_SHORT).show()
-            Toast.makeText(requireContext(), "อันนี้กะยังบ่ทันเฮ็ดจ้า พส.", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), "อันนี้กะยังบ่ทันเฮ็ดจ้า พส.", Toast.LENGTH_SHORT)
+                .show()
 
         }
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment ProfileFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            ProfileFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
-
-
-    override fun onDestroyView() {
-        super.onDestroyView()
-        _binding = null
+    override fun onResume() {
+        super.onResume()
+        hideProgressDialog()
     }
 }

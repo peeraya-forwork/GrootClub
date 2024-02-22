@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.profile.editProfile.ProfileEdit">
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar_back"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin30dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/toolbar">
+
+            <TextView
+                android:id="@+id/txtSignUp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/update"
+                android:textColor="@color/text_slate_700"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin20dp"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtSignUp">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardImvProfile"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    app:cardCornerRadius="150dp">
+
+                    <ImageView
+                        android:id="@+id/imvProfile"
+                        android:scaleType="centerCrop"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        tools:ignore="ContentDescription" />
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/lyFName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin50dp"
+                    android:layout_marginTop="@dimen/margin20dp"
+                    android:background="@drawable/bg_edittext_rounded"
+                    android:paddingStart="@dimen/margin10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtSignUp"
+                    tools:ignore="RtlSymmetry">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imvFName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/margin50dp"
+                        android:src="@drawable/ic_account_outline"
+                        app:layout_constraintBottom_toBottomOf="@+id/lyFName"
+                        app:layout_constraintStart_toStartOf="@+id/lyFName"
+                        app:layout_constraintTop_toTopOf="@+id/lyFName" />
+
+                    <EditText
+                        android:id="@+id/etFName"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:hint="First name"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:paddingStart="@dimen/margin10dp"
+                        android:paddingEnd="@dimen/margin10dp"
+                        style="@style/TextInput16"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imvFName"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="RtlSymmetry" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/lyLName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin50dp"
+                    android:layout_marginTop="@dimen/margin20dp"
+                    android:background="@drawable/bg_edittext_rounded"
+                    android:paddingStart="@dimen/margin10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtSignUp"
+                    tools:ignore="RtlSymmetry">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imvLName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/margin50dp"
+                        android:src="@drawable/ic_account_outline"
+                        app:layout_constraintBottom_toBottomOf="@+id/lyLName"
+                        app:layout_constraintStart_toStartOf="@+id/lyLName"
+                        app:layout_constraintTop_toTopOf="@+id/lyLName" />
+
+                    <EditText
+                        android:id="@+id/etLName"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:hint="Last name"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="50"
+                        android:paddingStart="@dimen/margin10dp"
+                        android:paddingEnd="@dimen/margin10dp"
+                        style="@style/TextInput16"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imvLName"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="RtlSymmetry" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/lyEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin50dp"
+                    android:layout_marginTop="@dimen/margin20dp"
+                    android:background="@drawable/bg_edittext_rounded"
+                    android:paddingStart="@dimen/margin10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lyFullName"
+                    tools:ignore="RtlSymmetry">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imvEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/margin50dp"
+                        android:src="@drawable/ic_mail_outline"
+                        app:layout_constraintBottom_toBottomOf="@+id/lyEmail"
+                        app:layout_constraintStart_toStartOf="@+id/lyEmail"
+                        app:layout_constraintTop_toTopOf="@+id/lyEmail" />
+
+                    <EditText
+                        android:id="@+id/etEmail"
+                        style="@style/TextInput16"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:hint="@string/hint_abc_email_com"
+                        android:imeOptions="actionNext"
+                        android:inputType="textEmailAddress"
+                        android:paddingStart="@dimen/margin10dp"
+                        android:paddingEnd="@dimen/margin10dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imvEmail"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="RtlSymmetry" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/lyBirthDay"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin50dp"
+                    android:layout_marginTop="@dimen/margin20dp"
+                    android:background="@drawable/bg_edittext_rounded"
+                    android:paddingStart="@dimen/margin10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtSignUp"
+                    tools:ignore="RtlSymmetry">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imvBirthDay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/margin50dp"
+                        android:src="@drawable/calendar_month_24"
+                        app:layout_constraintBottom_toBottomOf="@+id/lyBirthDay"
+                        app:layout_constraintStart_toStartOf="@+id/lyBirthDay"
+                        app:layout_constraintTop_toTopOf="@+id/lyBirthDay" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/etBirthDay"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:gravity="start|center"
+                        android:hint="00/00/0000"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:paddingStart="@dimen/margin10dp"
+                        android:paddingEnd="@dimen/margin10dp"
+                        style="@style/TextInput16"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imvBirthDay"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="RtlSymmetry" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/lyAge"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin50dp"
+                    android:layout_marginTop="@dimen/margin20dp"
+                    android:background="@drawable/bg_edittext_rounded"
+                    android:paddingStart="@dimen/margin10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtSignUp"
+                    tools:ignore="RtlSymmetry">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imvAge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/margin50dp"
+                        android:src="@drawable/ic_account_outline"
+                        app:layout_constraintBottom_toBottomOf="@+id/lyAge"
+                        app:layout_constraintStart_toStartOf="@+id/lyAge"
+                        app:layout_constraintTop_toTopOf="@+id/lyAge" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvAge"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:hint="Age"
+                        android:imeOptions="actionNext"
+                        android:gravity="start|center"
+                        android:paddingStart="@dimen/margin10dp"
+                        android:paddingEnd="@dimen/margin10dp"
+                        style="@style/TextInput16"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imvAge"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="RtlSymmetry" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/lyGender"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin50dp"
+                    android:layout_marginTop="@dimen/margin20dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtSignUp"
+                    tools:ignore="RtlSymmetry">
+
+                    <Spinner
+                        android:id="@+id/spnGender"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_edittext_rounded"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:paddingStart="@dimen/margin10dp"
+                        android:paddingEnd="@dimen/margin10dp"
+                        style="@style/TextInput16"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="RtlSymmetry" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imvGender"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/margin50dp"
+                        android:src="@drawable/arrow_drop_down"
+                        android:paddingStart="@dimen/margin15dp"
+                        android:paddingEnd="@dimen/margin15dp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/lyPhone"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/margin50dp"
+                    android:layout_marginTop="@dimen/margin20dp"
+                    android:background="@drawable/bg_edittext_rounded"
+                    android:paddingStart="@dimen/margin10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/txtSignUp"
+                    tools:ignore="RtlSymmetry">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imvPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/margin50dp"
+                        android:src="@drawable/ic_account_outline"
+                        app:layout_constraintBottom_toBottomOf="@+id/lyPhone"
+                        app:layout_constraintStart_toStartOf="@+id/lyPhone"
+                        app:layout_constraintTop_toTopOf="@+id/lyPhone" />
+
+                    <EditText
+                        android:id="@+id/etPhone"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:background="@null"
+                        android:hint="09XXXXXXXX"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:paddingStart="@dimen/margin10dp"
+                        android:paddingEnd="@dimen/margin10dp"
+                        style="@style/TextInput16"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imvPhone"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:ignore="RtlSymmetry" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/btnUpdate"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:layout_marginTop="@dimen/margin20dp"
+                    android:background="@drawable/bg_rounded_corner_button"
+                    android:enabled="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/lyConfirmPass">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/txtBtnSignUp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/update"
+                        android:textAllCaps="true"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:textStyle="normal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imvBtnSignIn"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginEnd="@dimen/margin30dp"
+                        android:src="@drawable/bg_circle"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/ic_arrow_forward"
+                        android:backgroundTint="@color/white"
+                        app:layout_constraintBottom_toBottomOf="@+id/imvBtnSignIn"
+                        app:layout_constraintEnd_toEndOf="@+id/imvBtnSignIn"
+                        app:layout_constraintStart_toStartOf="@+id/imvBtnSignIn"
+                        app:layout_constraintTop_toTopOf="@+id/imvBtnSignIn" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+
+            <ProgressBar
+                android:id="@+id/progressBar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

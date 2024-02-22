@@ -32,4 +32,108 @@
     <string name="logout">Logout</string>
     <string name="our_support">Our Support</string>
     <string name="menu_about_us">About us</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="terms_of_services">Terms of services</string>
+    <string name="txt_of_services">1. Acceptance of Terms
+Welcome to our sport club! By accessing and using our facilities for tennis, badminton, swimming, yoga, and aerobic dance, you agree to comply with and be bound by these Terms of Service. If you do not agree with any part of these terms, please do not use our services.
+
+2. Club Membership
+- To access our facilities, you may be required to become a member of sport club. Membership details, including fees and benefits, can be found on our website or provided upon request.
+
+- Membership is open to individuals of all ages, subject to our membership criteria.
+
+3. Facility Booking
+- Members may book facilities for tennis, badminton, swimming, yoga, or aerobic dance sessions through our booking system.
+
+- Bookings are subject to availability and may be subject to additional fees.
+
+- Cancellations and rescheduling are allowed within a specified timeframe. Please refer to our cancellation policy for details.
+
+4. Participation in Activities
+- Participants in any sports or activities must adhere to safety guidelines and instructions provided by our staff.
+
+- Participants must be in good health and have the necessary skills and experience to participate safely in their chosen activities.
+
+5. Code of Conduct
+- All members and participants are expected to conduct themselves in a respectful and sportsmanlike manner.
+
+- Any form of harassment, discrimination, or unsportsmanlike behavior will not be tolerated and may result in membership termination.
+
+6. Liability and Waiver
+- Participation in sports and physical activities carries inherent risks. Our Sport Club is not liable for any injuries, accidents, or damages that may occur on our premises.
+
+- All members and participants are required to sign a liability waiver before engaging in any activities.
+
+7. Membership Termination
+- Our Sport Club reserves the right to terminate the membership of any individual who violates these Terms of Service or engages in misconduct.
+
+- Membership termination may result in the forfeiture of any membership fees.
+
+8. Privacy
+- We respect your privacy and will handle your personal information in accordance with our Privacy Policy, which can be found on our website.
+
+9. Changes to Terms
+- Our Sport Club reserves the right to modify or update these Terms of Service at any time. Any changes will be effective upon posting on our website.
+
+10. Contact Information
+If you have any questions or concerns about these Terms of Service, please contact us at:
+
+sport club
+
+4 Privet Drive, Little Whinging,
+Surrey, England
++66812345678
+sportclub@example.com
+By using our services, you acknowledge that you have read, understood, and agreed to these Terms of Service. Thank you for choosing Our Sport Club for your sporting and fitness needs. We look forward to providing you with a safe and enjoyable experience!</string>
+    <string name="txt_des_privacy_policy">Effective Date: 20 SEP 2023
+At Sport Club, we are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your personal data when you use our services, book our facilities, or become a member of our club.
+
+1. Information We Collect
+We may collect the following types of personal information from you:
+
+Contact Information (e.g., name, email address, phone number)
+Membership Information (e.g., membership status, payment details)
+Booking Information (e.g., activity reservations, date, time)
+Health and Safety Information (e.g., medical conditions, emergency contacts)
+Usage Information (e.g., website usage, facility usage)
+Communications (e.g., emails, feedback, inquiries)
+2. How We Use Your Information
+We may use your personal information for the following purposes:
+
+To manage your membership and provide access to our facilities.
+To process and confirm your bookings and reservations.
+To communicate with you regarding your membership, bookings, or inquiries.
+To improve our services, facilities, and website based on user feedback and usage patterns.
+To send you updates, newsletters, and promotional offers (you can opt-out of these communications at any time).
+To comply with legal obligations and respond to lawful requests.
+3. Disclosure of Information
+We may share your personal information with third parties in the following circumstances:
+
+With service providers who assist us in delivering our services (e.g., payment processors, booking platforms).
+With legal authorities to comply with applicable laws and regulations.
+In case of emergencies or medical incidents, with healthcare providers or emergency contacts as necessary.
+With your consent, in circumstances not covered by this policy.
+4. Security Measures
+We take reasonable measures to protect your personal information from unauthorized access, disclosure, alteration, or destruction. These measures include data encryption, access controls, and regular security assessments.
+
+5. Your Rights and Choices
+You have the right to access, correct, or delete your personal information.
+You can opt-out of receiving promotional communications from us.
+You may request a copy of the data we hold about you.
+If you have concerns about our data processing practices, please contact us.
+6. Changes to this Privacy Policy
+We reserve the right to update or modify this Privacy Policy at any time. Any changes will be effective upon posting on our website.
+
+7. Contact Us
+If you have questions or concerns regarding our Privacy Policy or data practices, please contact us at:
+
+4 Privet Drive, Little Whinging,
+Surrey, England
++66812345678
+sportclub@example.com
+By using our services, you consent to the terms of this Privacy Policy and the collection and use of your personal information as described herein. Thank you for trusting Our Sport Club with your data, and we look forward to providing you with exceptional service.</string>
+    <string name="login_failed">Login failed</string>
+    <string name="update">Update</string>
+    <string name="don_t_have_an_account">Don\'t have an account?</string>
+    <string name="under_line_sign_up"><u>Sign Up</u></string>
 </resources>
